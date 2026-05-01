@@ -1,0 +1,154 @@
+.wishlist-page {
+  padding: 120px 5% 60px;
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+.wishlist-header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.wishlist-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.wishlist-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.wishlist-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow);
+}
+
+.card-img {
+  position: relative;
+  aspect-ratio: 1/1;
+  background: white;
+  padding: 20px;
+}
+
+[data-theme='dark'] .card-img {
+  background: #1e293b;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #ef4444;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+  background: #ef4444;
+  color: white;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-add-cart {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.btn-view {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.btn-view:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.empty-wishlist {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.empty-icon {
+  color: var(--border);
+  margin-bottom: 20px;
+}
+
+.btn-shop {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 40px;
+  background: var(--primary);
+  color: white;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+}

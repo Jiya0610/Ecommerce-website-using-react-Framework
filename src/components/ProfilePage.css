@@ -1,0 +1,278 @@
+.profile-page {
+  min-height: 100vh;
+  padding: 120px 5% 60px;
+  background: var(--bg);
+  color: var(--text);
+  transition: var(--transition);
+}
+
+.profile-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.profile-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+.btn-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 20px;
+  transition: var(--transition);
+  width: fit-content;
+}
+
+.btn-back:hover {
+  color: var(--primary);
+  transform: translateX(-5px);
+}
+
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.profile-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+/* Sidebar Card */
+.sidebar-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-avatar-container {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: var(--primary);
+  margin-bottom: 25px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  border: 4px solid var(--border);
+}
+
+.main-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder-large {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.avatar-edit-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+  color: white;
+}
+
+.profile-avatar-container:hover .avatar-edit-badge {
+  opacity: 1;
+}
+
+.profile-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.profile-email {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.profile-role-badge {
+  background: var(--bg);
+  color: var(--primary);
+  padding: 4px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  border: 1px solid var(--border);
+  text-transform: capitalize;
+}
+
+.profile-member-since {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Edit Card */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.card-header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.form-group input {
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-group input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(230, 126, 34, 0.1);
+}
+
+.readonly-input {
+  color: var(--text-muted);
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme='dark'] .readonly-input {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.btn-save {
+  margin-top: 10px;
+  background: #3b82f6;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-save:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Orders Card */
+.orders-card {
+  padding: 24px 32px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-view-all {
+  background: var(--primary);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-view-all:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.orders-content {
+  margin-top: 24px;
+  text-align: center;
+  padding: 40px;
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+}
+
+.no-orders-link {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.no-orders-link:hover {
+  color: var(--primary);
+}
+
+.start-shopping-text {
+  color: #3b82f6;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+@media (max-width: 850px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+

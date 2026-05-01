@@ -1,0 +1,37 @@
+.app {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Premium background blobs */
+.blob-1, .blob-2 {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+  opacity: 0.15;
+}
+
+[data-theme='dark'] .blob-1, 
+[data-theme='dark'] .blob-2 {
+  opacity: 0.1;
+}
+
+.blob-1 {
+  top: -100px;
+  right: -100px;
+  background: var(--primary);
+}
+
+.blob-2 {
+  bottom: -100px;
+  left: -100px;
+  background: var(--secondary);
+}
+
+main {
+  width: 100%;
+}

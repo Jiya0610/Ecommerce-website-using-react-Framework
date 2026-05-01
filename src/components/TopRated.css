@@ -1,0 +1,123 @@
+.top-rated-section {
+  padding: 80px 5%;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+/* Reusing grid and card styles for consistency */
+.top-rated-section .products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.top-rated-section .product-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  /* overflow: hidden; */
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.top-rated-section .product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow);
+  border-color: var(--primary);
+}
+
+.top-rated-section .product-img-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.top-rated-section .product-img-container img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.top-rated-section .product-card:hover .product-img-container img {
+  transform: scale(1.08);
+}
+
+.top-rated-section .add-to-cart-btn {
+  position: absolute;
+  top: 230px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(230, 126, 34, 0.4);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 5;
+}
+
+.top-rated-section .product-card:hover .add-to-cart-btn {
+  transform: scale(1.1);
+}
+
+.top-rated-section .product-details {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-rated-section .product-brand {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.top-rated-section .product-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+  height: 3rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.top-rated-section .product-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.top-rated-section .product-price {
+  margin-top: 15px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.top-rated-section .amount {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text);
+}
